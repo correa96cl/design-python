@@ -8,7 +8,8 @@ class Calculator1:
         splited_number = input_data/3
         first_process_result = self.__first_process(splited_number)
         second_process_result = self.__second_process(splited_number)
-        calc_result = first_process_result + second_process_result + splited_number
+        calc_result = first_process_result + second_process_result + \
+            splited_number
         response = self.__format_response(calc_result)
         return response
         
@@ -33,6 +34,6 @@ class Calculator1:
         return {
             "data": {
                 "Calculator": 1,
-                'result': round(calc_result, 2)
+                "result": round(calc_result, 2)
             }
         }
