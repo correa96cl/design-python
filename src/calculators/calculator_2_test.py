@@ -1,7 +1,7 @@
 from src.drivers.interfaces.driver_handler_interface import DriverHandlerInterface
 from src.drivers.numpy_handler import NumpyNumber
 from .calculator_2 import Calculator2
-from typing import Dict
+from typing import Dict, List
 from pytest import raises
 
 class MockRequest:
