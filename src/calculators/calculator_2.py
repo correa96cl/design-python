@@ -2,6 +2,8 @@ from flask import request as FlaskRequest
 from typing import Dict, List
 from src.drivers.interfaces.driver_handler_interface import DriverHandlerInterface
 from src.drivers.numpy_handler import NumpyNumber
+from src.errors.http_unprocessable_entity import HttpUnprocessableEntity
+
 
 class Calculator2:
 
@@ -17,7 +19,7 @@ class Calculator2:
     
     def __validate_body(self, body: Dict) -> list[float]:
         if "numbers" not in body:
-            raise Exception("numbers is required")
+            raise HttpUnprocessableEntity("numbers is required")
         
         input_date = body["numbers"]
         return input_date
